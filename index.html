@@ -2,9 +2,60 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Album Flipbook</title>
-  <link rel="stylesheet" href="style.css">
+  <title>📖 Album Kenangan</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+      text-align: center;
+    }
+    h1 {
+      margin: 20px 0;
+      color: #333;
+    }
+    .book {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: auto;
+    }
+    .page {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      transition: transform 0.3s;
+    }
+    .page:hover {
+      transform: scale(1.05);
+    }
+    .page img {
+      width: 400px;
+      height: auto;
+      display: block;
+    }
+    .controls {
+      margin: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,26 +68,15 @@
     <div class="page"><img src="images/halaman4.png" alt="Halaman 4"></div>
   </div>
 
-  <!-- Tombol navigasi -->
   <div class="controls">
     <button onclick="prevPage()">⬅️ Prev</button>
     <button onclick="nextPage()">Next ➡️</button>
-    <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
-    <button onclick="toggleAutoPlay()" id="autoBtn">▶️ Auto Play</button>
   </div>
 
-  <!-- Musik background -->
+  <!-- Background musik -->
   <audio autoplay loop>
     <source src="musik.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Suara flip -->
-  <audio id="flipSound">
-    <source src="flip.mp3" type="audio/mpeg">
-  </audio>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
-
