@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Flipbook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📖 Album Kenangan</h1>
+
+  <div id="book" class="book">
+    <div class="page"><img src="images/halaman (1).png" alt="Halaman 1"></div>
+    <div class="page"><img src="images/halaman (2).png" alt="Halaman 2"></div>
+    <div class="page"><img src="images/halaman (3).png" alt="Halaman 3"></div>
+    <div class="page"><img src="images/halaman (4).png" alt="Halaman 4"></div>
+  </div>
+
+  <!-- Tombol navigasi -->
+  <div class="controls">
+    <button onclick="prevPage()">⬅️ Prev</button>
+    <button onclick="nextPage()">Next ➡️</button>
+    <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
+    <button onclick="toggleAutoPlay()" id="autoBtn">▶️ Auto Play</button>
+  </div>
+
+  <!-- Musik background -->
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Suara flip -->
+  <audio id="flipSound">
+    <source src="flip.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
